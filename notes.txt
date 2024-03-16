@@ -1,0 +1,35 @@
+**Program Layout/Design:**
+
+* **Main Program**: This is the main entry point of the program where the user interacts with the application. 
+	It will handle user input, instantiate the required classes, and call the necessary functions.
+* **WeatherAPI**: This class will handle the communication with the weather API to retrieve weather data.
+* **WeatherData**: This class will hold the weather data retrieved from the API.
+* **WeatherDisplay**: This class will be responsible for displaying the weather data to the user.
+
+**Class Functions:**
+
+* **WeatherAPI:**
+	+ `getWeatherData(cityName)`: Retrieves the weather data for the given city name from the API.
+* **WeatherData:**
+	+ `setData(data)`: Sets the weather data retrieved from the API.
+	+ `getData()`: Returns the current weather data.
+* **WeatherDisplay:**
+	+ `displayWeather(data)`: Displays the weather data to the user.
+
+**API for Retrieving Weather Data:**
+
+For this program, we can use the OpenWeatherMap API, which provides a free API key for limited requests. 
+You can sign up for an API key on their website.
+
+The API endpoint for retrieving weather data is: `api.openweathermap.org/data/2.5/weather?q={city_name}&appid={api_key}`
+
+**Example Program Flow:**
+
+1. User enters the city name.
+2. Main Program creates an instance of WeatherAPI and calls `getWeatherData(cityName)`.
+3. WeatherAPI sends a request to the OpenWeatherMap API with the city name and retrieves the weather data.
+4. WeatherAPI creates an instance of WeatherData and calls `setData(data)` to set the retrieved weather data.
+5. Main Program creates an instance of WeatherDisplay and calls `displayWeather(data)` to display the weather data to the user.
+
+This is a basic design and you can add more features and complexity as needed. For example, you could add error handling for API errors, 
+or add more detailed weather data like forecasts or weather alerts.
