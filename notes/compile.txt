@@ -1,0 +1,13 @@
+From root directory:
+
+To create all the necessary .o object files:
+g++ -c src/weather_api.cpp
+g++ -c src/weather_data.cpp
+g++ -c src/weather_display.cpp
+g++ -c main.cpp
+
+To link and create the executable:
+g++ main.o weather_api.o weather_data.o weather_display.o -o weather_app
+
+To run the executable:
+./weather_app

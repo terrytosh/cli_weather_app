@@ -1,4 +1,4 @@
-#include "weather_data.h"
+#include "../includes/weather_data.h"
 #include <iostream>
 
 void WeatherData::setData(std::string data) {
@@ -9,5 +9,5 @@ void WeatherData::setData(std::string data) {
 std::string WeatherData::getData() {
     // Implement logic to get the weather data
     std::cout << "Getting weather data" << std::endl;
-    return "Dummy weather data";
+    return "Dummy weather DATATATA";
 }

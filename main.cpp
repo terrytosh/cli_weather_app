@@ -1,6 +1,6 @@
-#include "weather_api.h"
-#include "weather_data.h"
-#include "weather_display.h"
+#include "includes/weather_api.h"
+#include "includes/weather_data.h"
+#include "includes/weather_display.h"
 
 #include <iostream>
 
