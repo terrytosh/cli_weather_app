@@ -1,2 +1,5 @@
+# Ignore .o object files
 *.o
-*.out
+
+# Ignore the final executable file
+weather_app
