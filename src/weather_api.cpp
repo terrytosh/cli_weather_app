@@ -1,6 +1,7 @@
 #include "../includes/weather_api.h"
 #include <iostream>
 #include <fstream>
+#include <stdexcept>
 
 WeatherAPI::WeatherAPI(const std::string filePath) {
     this->filePath = filePath;
@@ -12,14 +13,15 @@ std::string WeatherAPI::getApiKey() {
     std::ifstream file(filePath);
     std::string key;
 
-    if (file.is_open()) {
-        std::getline(file, key);
-        file.close();
-        std::cout << "File opened and closed: " << filePath << std::endl;
-    } 
-    else {
-        std::cout << "Unable to open file: " << filePath << std::endl;
+    if (!file.is_open()) {
+        throw std::runtime_error("Failed to open file: " + filePath);
     }
+    
+    if (!std::getline(file, key)) {
+        throw std::runtime_error("Failed to read from file: " + filePath);
+    }
+    
+    file.close();
 
     return key;
 }

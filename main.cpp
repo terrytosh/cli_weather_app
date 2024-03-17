@@ -7,8 +7,14 @@
 
 int main() {
     
-    std::string filePath = "config.env";
-    WeatherAPI api = WeatherAPI(filePath);
+    try {
+        std::string filePath = "config.env";
+        WeatherAPI api = WeatherAPI(filePath);
+    }
+    catch (const std::runtime_error &e) {
+        std::cerr << "Runtime error caught: " << e.what() << std::endl;
+    }
+    
 
     return 0;
 }
