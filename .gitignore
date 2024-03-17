@@ -2,6 +2,6 @@
 *.o
 
 # Ignore the final executable file
-weather_app
+wapp
 
 config.env
